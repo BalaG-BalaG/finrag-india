@@ -1,0 +1,129 @@
+{
+  "B2_struct_guard": {
+    "n": 20,
+    "n_answerable": 13,
+    "n_unanswerable": 7,
+    "counts": {
+      "correct": 4,
+      "wrong": 1,
+      "honest_abstain": 7,
+      "over_abstain": 8
+    },
+    "coverage_pct": 38.46,
+    "selective_risk_pct": 20.0,
+    "answer_accuracy_pct": 30.77,
+    "hallucination_rate_pct": 5.0,
+    "honest_abstention_pct": 100.0,
+    "over_abstention_pct": 61.54,
+    "flagged_pct": 15.0,
+    "mean_latency_ms": 247878.1,
+    "p95_latency_ms": 583722,
+    "mean_iterations": 1.0,
+    "aurc": 0.3997,
+    "risk_coverage_curve": [
+      {
+        "coverage": 0.0769,
+        "risk": 0.0,
+        "threshold": 1.0
+      },
+      {
+        "coverage": 0.1538,
+        "risk": 0.0,
+        "threshold": 1.0
+      },
+      {
+        "coverage": 0.2308,
+        "risk": 0.3333,
+        "threshold": 0.8529
+      },
+      {
+        "coverage": 0.3077,
+        "risk": 0.25,
+        "threshold": 0.75
+      },
+      {
+        "coverage": 0.3846,
+        "risk": 0.2,
+        "threshold": 0.75
+      },
+      {
+        "coverage": 0.4615,
+        "risk": 0.3333,
+        "threshold": 0.52
+      },
+      {
+        "coverage": 0.5385,
+        "risk": 0.4286,
+        "threshold": 0.5
+      },
+      {
+        "coverage": 0.6154,
+        "risk": 0.5,
+        "threshold": 0.5
+      },
+      {
+        "coverage": 0.6923,
+        "risk": 0.5556,
+        "threshold": 0.5
+      },
+      {
+        "coverage": 0.7692,
+        "risk": 0.6,
+        "threshold": 0.4
+      },
+      {
+        "coverage": 0.8462,
+        "risk": 0.6364,
+        "threshold": 0.25
+      },
+      {
+        "coverage": 0.9231,
+        "risk": 0.6667,
+        "threshold": 0.0864
+      },
+      {
+        "coverage": 1.0,
+        "risk": 0.6923,
+        "threshold": 0.0445
+      }
+    ],
+    "retrieval": {
+      "recall@1": 100.0,
+      "recall@3": 100.0,
+      "recall@5": 100.0,
+      "recall@10": 100.0,
+      "mrr": 1.0,
+      "ndcg@10": 1.0
+    },
+    "by_type": {
+      "yoy": {
+        "n": 5,
+        "correct": 0,
+        "wrong": 1,
+        "honest_abstain": 0,
+        "over_abstain": 4
+      },
+      "scale_trap": {
+        "n": 1,
+        "correct": 1,
+        "wrong": 0,
+        "honest_abstain": 0,
+        "over_abstain": 0
+      },
+      "scope_trap": {
+        "n": 7,
+        "correct": 0,
+        "wrong": 0,
+        "honest_abstain": 7,
+        "over_abstain": 0
+      },
+      "lookup": {
+        "n": 7,
+        "correct": 3,
+        "wrong": 0,
+        "honest_abstain": 0,
+        "over_abstain": 4
+      }
+    }
+  }
+}

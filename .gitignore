@@ -1,0 +1,61 @@
+# --- Secrets: never commit ---
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Corpora: published by their own authorities; link, don't redistribute ---
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/sample_bank_ar.pdf
+data/interim/
+data/processed/
+dataset/
+
+# --- Model + embedding caches ---
+*.npy
+*.pt
+*.bin
+*.safetensors
+.cache/
+models/
+
+# --- Per-item evaluation dumps (large). Summaries ARE kept: see below. ---
+eval/results*/*_records.json
+eval/results*/*_records_ctx.json
+
+# --- Local scratch ---
+before.txt
+after.txt
+*.log
+notebooks/scratch*
+setup.ps1
+
+# --- Duplicated docs (the canonical copies live in docs/) ---
+/REVIEW2_TECHNICAL_SPEC.md
+/ROADMAP_48H.md
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,16 @@
+# Core app (Python 3.10-3.12). Versions = what was current on PyPI when this was generated.
+pdfplumber>=0.11
+docling>=2.100            # optional but recommended parser (downloads layout + TableFormer models on first run)
+psycopg[binary]>=3.2
+pgvector>=0.4
+numpy
+pandas
+sentence-transformers>=5.0
+openai>=1.50              # any OpenAI-compatible endpoint (Ollama / Groq / Gemini-compat / OpenAI)
+fastapi
+uvicorn
+streamlit
+requests
+python-dotenv
+langfuse>=3.0             # optional tracing
+pytest

@@ -1,0 +1,38 @@
+name: CI
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: finrag
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready --health-interval 10s
+          --health-timeout 5s --health-retries 5
+    env:
+      PG_DSN: postgresql://postgres:postgres@localhost:5432/finrag
+      EMBED_BACKEND: hash        # deterministic, no model download in CI
+      LLM_OFFLINE: "1"
+      VERIFY_BACKEND: none
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pdfplumber "psycopg[binary]" pgvector numpy pytest reportlab
+      - name: Unit tests
+        run: pytest tests -q
+      - name: End-to-end smoke (ingest -> retrieve -> guard -> eval)
+        run: |
+          python tools/make_sample_pdf.py
+          python -m finrag.ingest.run_ingest --pdf data/raw/sample_bank_ar.pdf \
+            --entity "Bharat National Bank" --fiscal-year FY2023-24 --also-naive --init
+          python eval/build_benchmark.py --max-items 40
+          python eval/run_eval.py --arms B1_struct_noguard,B2_struct_guard --split test
+      - uses: actions/upload-artifact@v4
+        with: {name: eval-results, path: eval/results/}

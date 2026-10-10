@@ -1,0 +1,73 @@
+{
+  "B2_struct_guard": {
+    "n": 6,
+    "n_answerable": 6,
+    "n_unanswerable": 0,
+    "counts": {
+      "correct": 0,
+      "wrong": 1,
+      "honest_abstain": 0,
+      "over_abstain": 5
+    },
+    "coverage_pct": 16.67,
+    "selective_risk_pct": 100.0,
+    "answer_accuracy_pct": 0.0,
+    "hallucination_rate_pct": 16.67,
+    "honest_abstention_pct": null,
+    "over_abstention_pct": 83.33,
+    "flagged_pct": 16.67,
+    "mean_latency_ms": 926094.2,
+    "p95_latency_ms": 70225,
+    "mean_iterations": 1.0,
+    "aurc": 1.0,
+    "risk_coverage_curve": [
+      {
+        "coverage": 0.1667,
+        "risk": 1.0,
+        "threshold": 0.6
+      },
+      {
+        "coverage": 0.3333,
+        "risk": 1.0,
+        "threshold": 0.4444
+      },
+      {
+        "coverage": 0.5,
+        "risk": 1.0,
+        "threshold": 0.4375
+      },
+      {
+        "coverage": 0.6667,
+        "risk": 1.0,
+        "threshold": 0.0
+      },
+      {
+        "coverage": 0.8333,
+        "risk": 1.0,
+        "threshold": 0.0
+      },
+      {
+        "coverage": 1.0,
+        "risk": 1.0,
+        "threshold": 0.0
+      }
+    ],
+    "retrieval": {
+      "recall@1": 33.33,
+      "recall@3": 50.0,
+      "recall@5": 66.67,
+      "recall@10": 66.67,
+      "mrr": 0.4583,
+      "ndcg@10": 0.5103
+    },
+    "by_type": {
+      "yoy": {
+        "n": 6,
+        "correct": 0,
+        "wrong": 1,
+        "honest_abstain": 0,
+        "over_abstain": 5
+      }
+    }
+  }
+}

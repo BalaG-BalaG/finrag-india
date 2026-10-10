@@ -217,7 +217,7 @@ Stated plainly, because the numbers above are not the whole picture.
   year   = {2026},
   note   = {M.Sc. Artificial Intelligence and Machine Learning dissertation,
             Vellore Institute of Technology},
-  howpublished = {\url{https://github.com/<your-username>/finrag-india}}
+  howpublished = {\url{https://github.com/BalaG-BalaG/finrag-india}}
 }
 ```
 
